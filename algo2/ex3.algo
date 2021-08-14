@@ -1,0 +1,24 @@
+ALGORITHM algorithm_name
+VAR
+     set1 : ARRAY_OF type[5] :=[1,5,3,8]
+ set2 : ARRAY_OF type[5] :=[9,1,6,5]
+ tab : ARRAY_OF INTEGER [];
+ found:BOOLEAN;
+ sum_distinct:INTEGER:=0
+ sumsum_commun :INTEGER:=0
+ HASH_TABLE<INTEGER,INTEGER>
+
+BEGIN
+    tab:=concat(set1,set2)
+    FOR i FROM 0 TO tab.length  DO
+
+       IF HASH_TABLE.lookup(tab[i])=false) THEN
+            HASH_TABLE.insert(tab[i],1)
+    
+       ELSE
+           HASH_TABLE.insert(tab[i],HASH_TABLE.get(tab[i])+1)
+       END_IF
+        
+        
+    END_FOR
+END
